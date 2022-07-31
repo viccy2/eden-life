@@ -21,9 +21,9 @@ export default new Vuex.Store({
   },
   actions: {
      getProducts : ({commit}) => {
-      axios.get('http://localhost:5000/app/api/user')
+      axios.get('https://dog.ceo/api/breeds/image/random/100')
       .then(response => {
-        commit('SET_PRODUCTS', response.data)
+        commit('SET_PRODUCTS', response.data.message)
       })
     },
     getProduct : ({commit}, productId) => {

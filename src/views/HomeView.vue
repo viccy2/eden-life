@@ -5,18 +5,13 @@
                 {{this.$route.params.message}}
             </v-alert>
             <v-row no-gutters>
-                <v-col sm="4" class="pa-3" v-for="product in products" :key="product._id" >
+                <v-col sm="4" class="pa-3" v-for="product in products" :key="product" >
                     <v-card flat class="pa-1" :to=" {name : 'about', params : {id : product._id}}">
-                         <v-img :src="product.image"> </v-img>
-                        <v-btn class="ml-4 mt-3" small outlined color ="indigo">
-                             {{product.name}}
+                         <v-img :src="product"> </v-img>
+                        <v-btn class="mt-3" small outlined color ="success" width="100%">
+                          DOGs
+                             <!-- {{product.substring(0,10)+"..."}} -->
                         </v-btn>
-                        <v-card-title>
-                            {{product._id}}
-                        </v-card-title>
-                        <v-card-text class="py-0">
-                            <!-- <p>{{post._id.substring(0,100)+"..."}}</p> -->
-                        </v-card-text>
                     </v-card>
                 </v-col>
             </v-row>
@@ -35,6 +30,7 @@
     mounted() {
     this.$store.dispatch('getProducts');
     },
+    
     
   }
 </script>
