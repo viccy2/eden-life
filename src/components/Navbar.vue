@@ -3,15 +3,18 @@
         <!-- NAVBAR DISPLAY ON ALL DEVICES -->
         <v-container>
             <v-app-bar fixed height="">
-                <v-toolbar-title><img class="mt-1 imgs" rounded src="../assets/eden.svg" height="30" @click="Go"></v-toolbar-title>
+              <v-app-bar-nav-icon><v-btn icon>
+                <img class="imgs" rounded src="../assets/eden.svg" height="25" @click="Go">
+              </v-btn></v-app-bar-nav-icon>
+                <v-toolbar-icon></v-toolbar-icon>
                 <v-spacer></v-spacer>
                 <!-- THE SEARCH ICON -->
               
-                <v-text-field rounded color="grey" class="mt-8" solo label="search breeds..." prepend-inner-icon="mdi-magnify"></v-text-field>
+                <v-text-field rounded flat color="grey" class="mt-8" solo label="search breeds..." prepend-inner-icon="mdi-magnify"></v-text-field>
                 
                 <v-spacer></v-spacer>
                   <!-- THE NAVBAR ICON -->
-                <div class="d-flex flex-column align-center">
+                <div class="mt-1">
                     <v-btn icon >
                         <v-badge dot bordered color="success" overlap>
                         <v-icon tile>mdi-account</v-icon></v-badge>
