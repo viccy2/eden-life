@@ -1,23 +1,37 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    products : [
-      {id : 1, name : 'Banana Girl', price : 100},
-      {id : 2, name : 'Banana2 Girl', price : 200},
-      {id : 3, name : 'Banana3 Girl', price : 300},
-      {id : 4, name : 'Banana4 Girl', price : 400},
-      {id : 5, name : 'Banana5 Girl', price : 500}
-    ]
+    products : [],
+    product : null
   },
   getters: {
   },
   mutations: {
+    SET_PRODUCTS : (state, products) => {
+      state.products = products
+    },
+    SET_PRODUCT : (state, product) => {
+      state.product = product
+    }
   },
   actions: {
+     getProducts : ({commit}) => {
+      axios.get('http://localhost:5000/app/api/user')
+      .then(response => {
+        commit('SET_PRODUCTS', response.data)
+      })
+    },
+    getProduct : ({commit}, productId) => {
+      axios.get(`http://localhost:5000/app/api/user/${productId}`)
+      .then(response => {
+        commit('SET_PRODUCT', response.data)
+      })
+    }
   },
   modules: {
   }

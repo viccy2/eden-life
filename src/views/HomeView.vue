@@ -5,14 +5,14 @@
                 {{this.$route.params.message}}
             </v-alert>
             <v-row no-gutters>
-                <v-col sm="4" class="pa-3" v-for="product in products" :key="product.id" >
-                    <v-card class="pa-1" :to=" {name : 'about', params : {id : product.id}}">
-                         <!-- <v-img :src="`/${post.image}`"> </v-img> -->
+                <v-col sm="4" class="pa-3" v-for="product in products" :key="product._id" >
+                    <v-card flat class="pa-1" :to=" {name : 'about', params : {id : product._id}}">
+                         <v-img :src="product.image"> </v-img>
                         <v-btn class="ml-4 mt-3" small outlined color ="indigo">
                              {{product.name}}
                         </v-btn>
                         <v-card-title>
-                            {{product.price}}
+                            {{product._id}}
                         </v-card-title>
                         <v-card-text class="py-0">
                             <!-- <p>{{post._id.substring(0,100)+"..."}}</p> -->
@@ -27,10 +27,13 @@
 <script>
   export default {
     name: 'Home',
-    computed : {
+    computed:{
       products(){
         return this.$store.state.products;
       }
+    },
+    mounted() {
+    this.$store.dispatch('getProducts');
     },
     
   }

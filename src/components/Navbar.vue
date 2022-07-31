@@ -1,21 +1,18 @@
 <template>
     <div class="navbar">
         <!-- NAVBAR DISPLAY ON ALL DEVICES -->
-        <v-container-fluid>
-            <v-app-bar fixed height="50">
+        <v-container>
+            <v-app-bar fixed height="">
                 <v-toolbar-title><img class="mt-1 imgs" rounded src="../assets/eden.svg" height="30" @click="Go"></v-toolbar-title>
                 <v-spacer></v-spacer>
-                  <!-- THE SEARCH ICON -->
-                <div class="search-box">
-                    <input class="search-txt" type="text" name="" placeholder="Search breeds..." >
-                    <span class="search-btn" href="#">
-                        <v-icon color='white' >mdi-magnify</v-icon>
-                    </span>
-                </div>
+                <!-- THE SEARCH ICON -->
+              
+                <v-text-field rounded color="grey" class="mt-8" solo label="search breeds..." prepend-inner-icon="mdi-magnify"></v-text-field>
+                
                 <v-spacer></v-spacer>
                   <!-- THE NAVBAR ICON -->
                 <div class="d-flex flex-column align-center">
-                    <v-btn icon height="30">
+                    <v-btn icon >
                         <v-badge dot bordered color="success" overlap>
                         <v-icon tile>mdi-account</v-icon></v-badge>
                     </v-btn>
@@ -23,7 +20,7 @@
 
             </v-app-bar>
             
-        </v-container-fluid>
+        </v-container>
         NAVAR FOR ALL 
     </div>
 </template>
