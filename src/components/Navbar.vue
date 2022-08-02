@@ -21,7 +21,7 @@
             </v-app-bar>
             
         </v-container>
-        NAVAR FOR ALL 
+       
     </div>
 </template>
 <script>

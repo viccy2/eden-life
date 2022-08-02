@@ -1,7 +1,7 @@
 <template>
  <div class="home">
       <v-container>
-        <div class="search" style="margin-top:-20px">
+        <div class="search" style="margin-top:-0px">
 			    <v-text-field v-model="names" rounded flat color="grey" class="" solo label="search breeds..." prepend-inner-icon="mdi-magnify" ></v-text-field>
         </div>
             <v-alert border="left" close-text="Close Alert" color="green accent-4" dark dismissible v-if="this.$route.params.message">
