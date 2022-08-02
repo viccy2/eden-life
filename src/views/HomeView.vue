@@ -39,7 +39,7 @@
           }
         var dog = this.$store.state.products;
             dog = dog.filter(function(item){
-              if(item.toLowerCase().indexOf(names) !== -1){
+              if(item.toLowerCase().indexOf(names.toLowerCase()) !== -1){
                     return item;
               }
           })
