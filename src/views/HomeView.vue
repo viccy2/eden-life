@@ -33,7 +33,7 @@
     },
     computed:{
       searchDog(){
-        var names = this.names.toLowerCase();
+        var names = this.names;
          if(!names){
               return this.$store.state.products;
           }
