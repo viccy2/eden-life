@@ -13,7 +13,7 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_PRODUCTS : (state, products) => {
-      state.products = products.concat(products);
+      state.products = products;
     }
   },
   actions: {
