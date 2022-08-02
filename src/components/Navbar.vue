@@ -8,10 +8,7 @@
               </v-btn></v-app-bar-nav-icon>
                 <v-toolbar-icon></v-toolbar-icon>
                 <v-spacer></v-spacer>
-                <!-- THE SEARCH ICON -->
-              
-                <v-text-field rounded flat color="grey" class="mt-8" solo label="search breeds..." prepend-inner-icon="mdi-magnify"></v-text-field>
-                
+                <!-- THE SEARCH ICON -->                
                 <v-spacer></v-spacer>
                   <!-- THE NAVBAR ICON -->
                 <div class="mt-1">

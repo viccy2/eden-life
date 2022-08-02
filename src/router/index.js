@@ -14,11 +14,6 @@ const routes = [
     name: 'about',
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
-  {
-    path: '/post',
-    name: 'post',
-    component: () => import(/* webpackChunkName: "post" */ '../views/PostView.vue')
-  }
 ]
 
 const router = new VueRouter({

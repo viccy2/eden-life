@@ -15,18 +15,21 @@
                              
                           </v-col>
                       </v-row>
-                  </v-card-actions>
-                  <v-card-subtitle class="headline">
+                    </v-card-actions>
+                    <v-card-subtitle class="headline">
                       <h3>DOG</h3>
-                  </v-card-subtitle>
-                  <v-card-text class="grey--text">
-                      <p>This is one of the available known dogs' breed called <span class="text-color-black text-capitalize font-weight-bold text-decoration-underline" style="color:black" >
-                        {{post.toString().split("/")[4]}}</span></p>
+                    </v-card-subtitle>
+                    <v-card-text class="grey--text">
+                      <p>This is one of the available known dogs' breed called 
+                        <span class="text-color-black text-capitalize font-weight-bold text-decoration-underline" style="color:black" >
+                        {{post.toString().split("/")[4]}}
+                        </span>
+                      </p>
                      
-                  </v-card-text>
-               </v-card>
-           </v-col>
-       </v-container>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+        </v-container>
     </div>
     
 </template>
